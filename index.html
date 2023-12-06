@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div class="gray_bg">
+    <div class="container">
+      <header class="flex_default">
+        <div class="flex_default header_location">
+          <div class="flex_default">
+            <img width="17px"
+              src="https://cdn1.iconfinder.com/data/icons/ui-essential-17/32/UI_Essential_Outline_2_essential-app-ui-location-map-pin-22-512.png"
+              alt="">
+            <div class="location_uzum">
+              <a  href="#"> Город: </a>
+              <a href="#" class="underline"> Ташкент </a>
+            </div>
+
+          </div>
+          <a href="#">Пункты выдачи</a>
+        </div>
+        <p class="color_gray"> Доставим ваш заказ бесплатно — всего за 1 день! </p>
+        <div class="user_corner flex_default">
+          <a class="color_gray" href="#"> Вопрос-ответ </a>
+          <a class="color_gray" href="#"> Мои заказы </a>
+          <a class="flex_default" href="#"><img width="17px"
+              src="https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Russia_-_Circle-512.png"
+              alt=""> Русский </a>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="pick_up_modal_bg">
+    <div class="pick_up_modal">
+      <h2 >Выберите город доставки</h2>
+      <p >Бесплатная доставка на следующий день в 72 городов Узбекистана:</p>
+      <input class="pick_up_input" placeholder="Найти город" type="text">
+      <div class="cities"></div>
+      <img src="https://cdn1.iconfinder.com/data/icons/website-library-part-1/48/Website-Close-256.png" class="pick_up_modal_close">
+
+    </div>
+  </div>
+  <script src="/modules/pick_up.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
