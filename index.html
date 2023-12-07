@@ -6,7 +6,11 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>Vite App</title>
 </head>
 
@@ -20,7 +24,7 @@
               src="https://cdn1.iconfinder.com/data/icons/ui-essential-17/32/UI_Essential_Outline_2_essential-app-ui-location-map-pin-22-512.png"
               alt="">
             <div class="location_uzum">
-              <a  href="#"> Город: </a>
+              <a href="#"> Город: </a>
               <a href="#" class="underline"> Ташкент </a>
             </div>
 
@@ -38,16 +42,83 @@
       </header>
     </div>
   </div>
+  <div class="container mid_header">
+    <img src="/img/logo.png" alt="">
+    <div class="mid_header_mid">
+      <button class="catalog_btn">Каталог</button>
+      <div class="flex_default search_block">
+        <input placeholder="Искать товары и категории" class="main_search" type="text">
+        <img class="search_btn"
+          src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-256.png" alt="">
+      </div>
+
+    </div>
+    <div class="user_personal_block flex_default">
+      <btn class="user_personal flex_default">
+        <img width="24px" src="https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-256.png" alt="">
+        <a href="">Войти</a>
+      </btn>
+      <btn class="user_personal flex_default">
+        <img width="24px"
+          src="https://cdn4.iconfinder.com/data/icons/basic-ui-2-line/32/heart-love-like-likes-loved-favorite-256.png"
+          alt="">
+        <a href="">Избранное </a>
+      </btn>
+      <btn class="user_personal flex_default">
+        <img width="24px" src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-4-1/1024/bag4-256.png" alt="">
+        <a href="">Корзина</a>
+      </btn>
+    </div>
+  </div>
+  <div class="container bottom_header">
+    <div class="flex_default">
+      <img width="24px" src="https://static.uzum.uz/nasiya/union.png" alt="">
+      <p class="size13 weight600">Рассрочка</p>
+    </div>
+    <a href="">Электроника <div class="line"></div> </a>
+    <a href="">Бытовая техника<div class="line"></div></a>
+    <a href="">Одежда<div class="line"></div></a>
+    <a href="">Обувь<div class="line"></div></a>
+    <a href="">Аксессуары<div class="line"></div></a>
+    <a href="">Красота и уход<div class="line"></div></a>
+    <a href="">Здоровьe<div class="line"></div></a>
+    <a href="">Товары для дома<div class="line"></div></a>
+    <a href="">Строительство и ремонт<div class="line"></div></a>
+
+  </div>
+
+
+
+
   <div class="pick_up_modal_bg">
     <div class="pick_up_modal">
-      <h2 >Выберите город доставки</h2>
-      <p >Бесплатная доставка на следующий день в 72 городов Узбекистана:</p>
+      <h2>Выберите город доставки</h2>
+      <p>Бесплатная доставка на следующий день в 72 городов Узбекистана:</p>
       <input class="pick_up_input" placeholder="Найти город" type="text">
       <div class="cities"></div>
-      <img src="https://cdn1.iconfinder.com/data/icons/website-library-part-1/48/Website-Close-256.png" class="pick_up_modal_close">
+      <img src="https://cdn1.iconfinder.com/data/icons/website-library-part-1/48/Website-Close-256.png"
+        class="pick_up_modal_close">
 
     </div>
   </div>
+
+
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      // Опции свайпера
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/modules/pick_up.js"></script>
   <script type="module" src="/main.js"></script>
 </body>

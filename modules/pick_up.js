@@ -84,14 +84,21 @@ let pick_up_modal_bg =document.querySelector(".pick_up_modal_bg")
 let pick_up_modal_close = document.querySelector(".pick_up_modal_close")
 let pick_up_modal = document.querySelector(".pick_up_modal")
 location_uzum.onclick = () =>{
-    pick_up_modal_bg.style.opacity = "1"
-    pick_up_modal_bg.style.zIndex= "22"
-    pick_up_modal.style.transform= "translateY(0%)";
+
+    pick_up_modal_bg.style.display = "block"
+    setTimeout(() => {
+        pick_up_modal_bg.style.opacity = "1"
+        pick_up_modal_bg.style.zIndex= "22"
+        pick_up_modal.style.transform= "translateY(0%)";
+    }, 100);
 }
 pick_up_modal_close.onclick =() =>{
     pick_up_modal_bg.style.zIndex= "-1"
     pick_up_modal_bg.style.opacity = "0"
     pick_up_modal.style.transform= "translateY(50%)";
+    setTimeout(() => {
+        pick_up_modal_bg.style.display = "none"
+    }, 1000);
 
 }
 city_reload(uzbekistanCities)
