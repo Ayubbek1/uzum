@@ -83,8 +83,9 @@ let location_uzum = document.querySelector(".location_uzum")
 let pick_up_modal_bg =document.querySelector(".pick_up_modal_bg")
 let pick_up_modal_close = document.querySelector(".pick_up_modal_close")
 let pick_up_modal = document.querySelector(".pick_up_modal")
+let body = document.body
 location_uzum.onclick = () =>{
-
+    body.style.overflow = "hidden"
     pick_up_modal_bg.style.display = "block"
     setTimeout(() => {
         pick_up_modal_bg.style.opacity = "1"
@@ -93,6 +94,8 @@ location_uzum.onclick = () =>{
     }, 100);
 }
 pick_up_modal_close.onclick =() =>{
+    body.style.overflow = "visible"
+
     pick_up_modal_bg.style.zIndex= "-1"
     pick_up_modal_bg.style.opacity = "0"
     pick_up_modal.style.transform= "translateY(50%)";
