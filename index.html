@@ -86,7 +86,23 @@
     <a href="">Строительство и ремонт<div class="line"></div></a>
 
   </div>
+  <div class="swiper container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="https://images.uzum.uz/clnbltfn7c6gg9idpn8g/main_page_banner.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.uzum.uz/clga9ofn7c6qm23k8mkg/main_page_banner.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.uzum.uz/clna31tenntcj8aaati0/main_page_banner.jpg" alt=""></div>
+      
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
 
 
 
@@ -103,19 +119,35 @@
   </div>
 
 
-  
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      // Опции свайпера
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      autoplay: {
+        delay: 4000, // задержка между переключениями в миллисекундах
+        disableOnInteraction: false, // не останавливать автопрокрутку при взаимодействии пользователя
+      },
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        clickable:true,
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
       },
+
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
